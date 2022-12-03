@@ -13,8 +13,6 @@ const Animation: React.FC<AnimationProps> = ({ children,inView }): JSX.Element =
         animate={inView ? "view" : "hidden"}  
     >
     <motion.div
-      initial="hidden"
-      animate="view"
       variants={{
         hidden: {opacity: 0}, 
         view: {opacity: 1,
