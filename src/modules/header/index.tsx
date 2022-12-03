@@ -2,8 +2,8 @@ import Link from "next/link";
 import React from "react";
 
 const links = [
-    { name: "Example Two", to: "#exampleOne", id: 1},
-    { name: "Example One", to: "#exampleTwo", id: 3 },
+    { name: "Example One", to: "#exampleOne", id: 1},
+    { name: "Example Two", to: "#exampleTwo", id: 2 },
     { name: "Example Three", to: "#exampleThree", id: 3 },
   ];
 interface HeaderProps {
