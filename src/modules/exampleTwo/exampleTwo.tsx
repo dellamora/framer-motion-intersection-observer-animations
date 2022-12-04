@@ -22,10 +22,18 @@ const ExampleTwo: React.FC<ExampleTwoProps> = ({ children }): JSX.Element => {
         src="/leftGirl.png"
         className=" absolute top-0 left-0 w-[21rem] h-[25rem]"
       />
+     <motion.img
+      src="/leftDownGirl.png"
+      className=" absolute bottom-0 left-0 w-[21rem] h-[25rem]"
+      />
+      <h1 className="text-3xl">somethuing idiot here</h1>
       <motion.img
-    
       src="/rightGirl.png"
       className=" absolute top-0 -right-28 w-[21rem] h-[25rem]"
+    />
+      <motion.img
+      src="/l.png"
+      className=" absolute bottom-0 -right-0 w-80 "
     />
       </Animation>
 
