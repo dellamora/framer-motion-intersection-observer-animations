@@ -4,7 +4,6 @@ import React from "react";
 const links = [
     { name: "Text Animations", to: "#exampleOne", id: 1},
     { name: "Image Animations", to: "#exampleTwo", id: 2 },
-    { name: "Something weird", to: "#exampleThree", id: 3 },
   ];
 interface HeaderProps {
   children?: React.ReactNode;
@@ -22,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ children }): JSX.Element => {
                 </a>
              ))}
          </div>
-        <Link  href="https://twitter.com/francidellamora" className="text-grayMedium font-thin"> view port: 33%</Link>
+        <Link  href="https://twitter.com/francidellamora" className="text-grayMedium font-thin"> threshold: 33%</Link>
         </nav>
     </div>
   );
