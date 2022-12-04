@@ -1,5 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { triggerAsyncId } from "async_hooks";
 type Props = {
   id: string;
   children: JSX.Element | JSX.Element[];
@@ -16,7 +17,6 @@ export const Section = ({
     threshold: 0.2,
     triggerOnce: true,
   });
-
   useEffect(() => {
     if (setIsInView) {
       setIsInView(inView);
@@ -29,7 +29,7 @@ export const Section = ({
       ref={ref}
       
     >
-      <div id={id} className="absolute pointer-events-none -top-[20px]"/>
+      <div id={id} className="absolute pointer-events-none "/>
       {children}
     </section>
   );
