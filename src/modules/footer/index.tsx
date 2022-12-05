@@ -6,6 +6,7 @@ interface footerProps {
 const Footer: React.FC<footerProps> = ({ children }): JSX.Element => {
   return (
     <footer className="text-grayMedium bg-primary flex items-center justify-between p-6 ">
+    <div className="flex flex-col items-start">
     <span className="text-sm  sm:text-center text-grayMedium ">
       © 2022
       <a
@@ -15,6 +16,19 @@ const Footer: React.FC<footerProps> = ({ children }): JSX.Element => {
         - Dellamora
       </a>
     </span>
+    <div>    
+      <span className="text-sm  sm:text-center text-grayMedium ">
+        Big Thanks to
+      </span>
+      <a
+        href="https://twitter.com/yungbzz"
+        className="m-1 hover:underline text-sm  sm:text-center text-grayMedium "
+      >
+        @yungbzz
+      </a>
+    </div>
+
+    </div>
     <ul className="flex flex-wrap items-center mt-3 text-sm   sm:mt-0">
       <li>
         <a
