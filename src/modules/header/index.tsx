@@ -2,8 +2,9 @@ import Link from "next/link";
 import React from "react";
 
 const links = [
-    { name: "Text Animations", to: "#exampleOne", id: 1},
-    { name: "Image Animations", to: "#exampleTwo", id: 2 },
+    { name: "Text delay", to: "#exampleOne", id: 1},
+    { name: "Image animations", to: "#exampleTwo", id: 2 },
+    { name: "Switch button", to: "#exampleThree", id: 3 },
   ];
 interface HeaderProps {
   children?: React.ReactNode;
