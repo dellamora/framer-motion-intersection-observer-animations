@@ -1,20 +1,46 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Section } from "../../common/components/section";
+import CompanyButton from "./button";
+import Animation from "../../common/components/animation";
 
-interface ExampleThreeProps {
-  children?: React.ReactNode;
-}
-const ExampleThree: React.FC<ExampleThreeProps> = ({ children }): JSX.Element => {
+
+const buttons = [
+  {name: "option 1", id: 1},
+  {name: "option 2", id: 2}
+]
+
+
+const ExampleThree = (): JSX.Element => {
   const [inView, setInView] = useState(false);
+  const [activeBtn, setActiveBtn] = useState(buttons[0].id);
+
   return (
     <Section 
+      className="flex-col p-0 gap-20 justify-center "
       id="exampleThree"
       setIsInView={state => {
-        setInView(state);
+        setInView(curr => state || curr);
+        console.log("change:", state)
       }}
     >
 
-      <h1>Yes, that was the cool animation</h1>
+
+      <div className="flex flex-col justify-center w-1/2">
+      {buttons.map(({name, id}) => {
+        return  (
+          <CompanyButton
+          key={`btn-${id}`}
+          active={activeBtn === id}
+          inView={inView}
+          onClick={() => { setActiveBtn(id)}}
+          >
+            {name}
+          </CompanyButton>
+        )
+      })}
+       <h1 className="mt-20 w-full flex justify-center text-sm text-grayMedium">Now you can explore new possibilties</h1>
+       </div>
     </Section>
   );
 };
