@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 type Props = {
   title?: string;
@@ -10,6 +11,11 @@ const Title = ({
   title,
   triggerAnimation,
 }: Props): JSX.Element => {
+  const [triggered, setTriggered] = useState(false)
+
+  useEffect(() => {
+    setTriggered(curr => triggerAnimation || curr)
+  },[triggerAnimation])
   const wordAnimation = {
     hidden: {},
     visible: {},
@@ -42,11 +48,11 @@ const Title = ({
         {title.split(" ").map((word, index) => {
           return (
             <motion.span
-            className=" mr-2"
+            className="mr-2"
               aria-hidden="true"
               key={`key-${word}-${index}`}
               initial="hidden"
-              animate={triggerAnimation ? "visible" : "hidden"}
+              animate={triggered ? "visible" : "hidden"}
               variants={wordAnimation}
               transition={{
                 delayChildren:
