@@ -15,7 +15,11 @@ module.exports = {
       whiteTextDarkMode: "#F1F1F1",
       secondaryDark: "#131313",
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        topics: "repeat(auto-fit, minmax(280px, 1fr))",
+      },
+    },
   },
   plugins: [],
 };
