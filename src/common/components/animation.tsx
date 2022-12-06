@@ -11,7 +11,7 @@ const Animation: React.FC<AnimationProps> = ({ children,inView }): JSX.Element =
       className="flex flex-col"
       initial="hidden"
       animate={inView ? "view" : "hidden"}  
-      transition={{staggerChildren: 1}}
+      transition={{staggerChildren: 0.5}}
     >
         {children}
     </motion.div>
