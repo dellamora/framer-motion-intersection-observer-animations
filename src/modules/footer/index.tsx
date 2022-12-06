@@ -5,9 +5,8 @@ interface footerProps {
 }
 const Footer: React.FC<footerProps> = ({ children }): JSX.Element => {
   return (
-    <footer className="text-grayMedium bg-primary flex items-center justify-between p-6 ">
-    <div className="flex flex-col items-start">
-    <span className="text-sm  sm:text-center text-grayMedium ">
+    <footer className="text-grayMedium bg-primary p-4  md:flex md:items-center md:justify-between md:p-6">
+    <span className="text-sm sm:text-center text-grayMedium">
       © 2022
       <a
         href="https://twitter.com/francidellamora"
@@ -27,9 +26,7 @@ const Footer: React.FC<footerProps> = ({ children }): JSX.Element => {
         @yungbzz
       </a>
     </div>
-
-    </div>
-    <ul className="flex flex-wrap items-center mt-3 text-sm   sm:mt-0">
+    <ul className="flex flex-wrap items-center mt-3 text-sm sm:mt-0">
       <li>
         <a
           href="https://discord.gg/Xxu2raVxs5"
