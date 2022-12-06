@@ -17,7 +17,7 @@ const ExampleThree = (): JSX.Element => {
 
   return (
     <Section 
-      className="flex-col p-0 gap-20 justify-center "
+      className="flex-col p-0 gap-20  flex justify-center items-center "
       id="exampleThree"
       setIsInView={state => {
         setInView(curr => state || curr);
