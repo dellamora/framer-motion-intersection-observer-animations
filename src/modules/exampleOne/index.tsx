@@ -4,44 +4,75 @@ import Animation from "../../common/components/animation";
 import { motion } from "framer-motion";
 import Title from "../../common/components/titleAnimation";
 
+const topics = [
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 
+  "Nam sodales purus et consequat pulvinar.", 
+  "Etiam semper risus vitae gravida posuere.", 
+  "Vivamus id nisi non sem dignissim tincidunt..", 
+  "Aliquam faucibus leo eu erat pellentesque ullamcorper.", 
+  "Ed laoreet turpis sit amet sollicitudin fringilla.", 
+  "Donec vel urna vel mi lobortis ultrices at quis ipsum.", 
+  "Ras sit amet lorem fermentum, faucibus est vitae, dapibus eros.",
+  "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to usingwill uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).", 
+]
+
 const paragraphs = [
-  {id:1, paragraph:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec fringilla tellus. Suspendisse viverra, augue vel commodo finibus, magna velit fermentum tortor, vitae molestie felis dui id ex. Aenean eleifend consectetur sodales. Cras ac consectetur tortor. Proin magna libero, viverra a aliquam sit amet, luctus eu ligula. Mauris euismod ut sem id eleifend. Donec laoreet interdum elit non interdum. Mauris auctor, justo id pharetra dignissim, risus tellus pretium libero, ac blandit nunc neque nec est. Suspendisse varius vestibulum ante, ut malesuada nunc iaculis eu. Sed dui velit, posuere vel ex ut, pretium luctus orci. Ut eget purus at tortor euismod gravida. Nullam quis nisl eget nisl finibus molestie. Cras gravida at arcu nec luctus."},
-  {id:2, paragraph:"Fusce auctor maximus massa, sed molestie libero finibus eleifend. Suspendisse potenti. Mauris feugiat a orci quis congue. Integer eros sapien, malesuada eget risus aliquet, venenatis imperdiet turpis. Nulla ornare ligula in tellus convallis, sit amet lacinia nisi congue. Nunc et dictum purus. Sed non ullamcorper ante. Vestibulum vestibulum quam id justo finibus, eu rutrum urna venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque non bibendum mi. Duis sed ante eu orci malesuada feugiat non sit amet est."},
-  {id:3, paragraph:"Donec in tellus in sapien pulvinar facilisis. Sed tempus ante et dapibus posuere. Suspendisse potenti. Etiam in scelerisque nibh, id pharetra urna. Ut euismod neque varius purus commodo, eget imperdiet sem porta. Duis ante tortor, rutrum at purus in, scelerisque gravida quam. In vel enim bibendum, auctor eros a, sagittis metus. Sed sit amet porta tortor, quis porta quam. Nulla vitae nunc dictum, rutrum risus quis, rhoncus eros. Proin luctus lobortis ipsum id placerat." },
-  {id:4, paragraph:"Fusce sollicitudin eleifend nibh, quis sodales magna tristique in. Etiam nisi justo, posuere vel convallis at, tincidunt faucibus justo. Nullam dictum at mauris at tincidunt. Mauris sit amet laoreet ex. Morbi nec cursus quam, et commodo nibh. Aenean dapibus pellentesque ex, eget consequat leo accumsan a. Nunc in turpis sollicitudin, euismod sapien eu, feugiat ante. Duis et ligula in libero consequat fringilla. Nam vitae massa eget mi sagittis tempor. Quisque at mi elementum nulla vehicula feugiat a ut massa. Fusce ultrices, justo eu tempor condimentum, dui lectus feugiat ante, quis lobortis nisi elit quis leo. Vivamus velit nunc, tincidunt non libero et, ullamcorper dignissim libero. Duis vel elit et massa pharetra tempor in interdum nulla. Etiam vehicula rutrum eleifend. Phasellus eros arcu, lacinia in massa ac, dictum hendrerit sem."},
+  "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet..",
+  "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32."
 ]
 interface ExampleOneProps {
   children?: React.ReactNode;
 }
-const ExampleOne: React.FC<ExampleOneProps> = ({ children }): JSX.Element => {
+
+const ExampleOne: React.FC<ExampleOneProps> = (): JSX.Element => {
   const [inView, setInView] = useState(false);
   return (
     <Section
       id="exampleOne"
       setIsInView={state => {
-        setInView(state);
+        setInView(state );
       }}
-
     >
-      <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-col items-center gap-4 p-8 md:p-16">
         <Title title="Lorem Ipsum" triggerAnimation={inView}/>
-          {paragraphs.map((p, i) => {
+        <div className="flex gap-4">
+          <div className="w-1/2">
+          {paragraphs.map((paragraph, i) => {
             return (
               <motion.p
+                initial={{opacity:0}}
+                animate={{opacity: 1, transition: {delay: 1 + i * 0.2}}}
+                className="text-justify" 
                 key={`paragraph-${i}`}
-                initial={{opacity: 0}}
-                animate={{ opacity: 1}}
-
-                transition={{
-                  x: { stiffness: 1000 },
-                  delay:
-                  1.2 + 0.2 + i * 0.4,
-                }} 
-                >
-                {p.paragraph}
+              >
+                {paragraph}
               </motion.p>
             )
           })}
+          </div>
+          <ul className="w-1/2 h-fit grid grid-cols-topics gap-4">
+            {topics.map((topic, i) => {
+              return (
+                <motion.li
+                  className={i === topics.length - 1 ? "col-span-2": " "}
+                  key={`topic-${i}`}
+                  initial={{opacity: 0}}
+                  animate={{ opacity: 1}}
+                  transition={{
+                    x: { stiffness: 1000 },                                                     
+                    delay:                              
+                    1.2 + 0.2 + i * 0.3,
+                  }} 
+                >                                                                                                                   
+                <div className="flex items-start">
+                <hr className="mr-2 mt-3 w-5 h-1 text-grayLight" />
+                   {topic}
+                   </div>
+                 </motion.li>
+              )
+            })}
+          </ul>
+      </div>
       </div>
     </Section>
   );
