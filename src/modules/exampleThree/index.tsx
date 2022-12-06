@@ -17,7 +17,7 @@ const ExampleThree = (): JSX.Element => {
 
   return (
     <Section 
-      className="flex-col p-0 gap-20  flex justify-center items-center "
+      className="min-h-[70vh] flex-col p-0 gap-20  flex justify-center items-center "
       id="exampleThree"
       setIsInView={state => {
         setInView(curr => state || curr);
@@ -37,7 +37,7 @@ const ExampleThree = (): JSX.Element => {
           </CompanyButton>
         )
       })}
-       <h1 className="mt-20 w-full flex justify-center text-sm text-grayMedium">Now you can explore new possibilties</h1>
+       <h1 className="mt-20 w-full flex justify-center text-sm text-grayMedium"></h1>
        </div>
     </Animation>
     </Section>

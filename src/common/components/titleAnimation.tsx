@@ -65,7 +65,7 @@ const Title = ({
               {word.split("").map((character, index) => {
                 return (
                   <motion.span
-                    className="text-3xl text-gray  "
+                    className="text-2xl md:text-3xl text-gray  "
                     aria-hidden="true"
                     key={`key-${character}-${index}`}
                     variants={characterAnimation}

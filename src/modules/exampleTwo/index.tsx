@@ -45,7 +45,7 @@ const ExampleTwo: React.FC<ExampleTwoProps> = ({ children }): JSX.Element => {
         initial={{y: 0, x:200, rotate: "6deg" }}
         animate={{y:0, x:0, rotate: "-6deg", transition: {type: "spring", stiffness: 50}}}       
         src="/l.png"
-        className=" absolute bottom-0 -right-80 lg:-right-96  h-[25rem] lg:h-[30rem] "
+        className=" absolute bottom-0  -right-[185px] md:-right-80 lg:-right-96 h-[18rem] md:h-[25rem] lg:h-[30rem] "
     />
       </Animation>
 

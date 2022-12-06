@@ -35,14 +35,14 @@ const ExampleOne: React.FC<ExampleOneProps> = (): JSX.Element => {
     >
       <div className="flex flex-col items-center gap-4 p-8 md:p-16">
         <Title title="Lorem Ipsum" triggerAnimation={inView}/>
-        <div className="flex gap-4">
-          <div className="w-1/2">
+        <div className="md:flex gap-4">
+          <div className="md:w-1/2">
           {paragraphs.map((paragraph, i) => {
             return (
               <motion.p
                 initial={{opacity:0}}
                 animate={{opacity: 1, transition: {delay: 1 + i * 0.2}}}
-                className="text-justify" 
+                className="text-justify " 
                 key={`paragraph-${i}`}
               >
                 {paragraph}
@@ -50,11 +50,11 @@ const ExampleOne: React.FC<ExampleOneProps> = (): JSX.Element => {
             )
           })}
           </div>
-          <ul className="w-1/2 h-fit grid grid-cols-topics gap-4">
+          <ul className=" md:w-1/2 h-fit grid grid-cols-topics gap-4">
             {topics.map((topic, i) => {
               return (
                 <motion.li
-                  className={i === topics.length - 1 ? "col-span-2": " "}
+                  className={i === topics.length - 1 ? "lg:col-span-2": " "}
                   key={`topic-${i}`}
                   initial={{opacity: 0}}
                   animate={{ opacity: 1}}
