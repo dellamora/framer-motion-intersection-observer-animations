@@ -14,8 +14,7 @@ export const Section = ({
   className,
 }: Props): JSX.Element => {
   const { ref, inView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
+    threshold: 0.4,
   });
   useEffect(() => {
     if (setIsInView) {
@@ -25,7 +24,7 @@ export const Section = ({
 
   return (
     <section
-      className={`min-h-[50vh] relative overflow-hidden p-[65px] flex justify-center items-center ${className}`}
+      className={`relative overflow-hidden ${className}`}
       ref={ref}
       id={id}
     >
