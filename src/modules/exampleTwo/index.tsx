@@ -18,12 +18,10 @@ const ExampleTwo: React.FC<ExampleTwoProps> = ({ children }): JSX.Element => {
       setIsInView={state => {
         setInView(state);
       }}
-      className="min-h-screen"
+      className="min-h-screen flex justify-center items-center "
       >
       <Title title="Yes, that was the cool animation" triggerAnimation={inView}/>
-      <Animation 
-      inView={inView}
-      >
+      <Animation inView={inView}>
       <motion.img
        initial={{y: 0, x: -200, rotate: "-24deg"}}
        animate={{y:0, x:-10, rotate: 0, transition: {type: "spring", stiffness: 50}}}  
