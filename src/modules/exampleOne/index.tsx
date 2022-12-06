@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Section from "../../common/components/section";
-import Animation from "../../common/components/animation";
 import { motion } from "framer-motion";
 import Title from "../../common/components/titleAnimation";
 
@@ -50,7 +49,7 @@ const ExampleOne: React.FC<ExampleOneProps> = (): JSX.Element => {
             )
           })}
           </div>
-          <ul className=" md:w-1/2 h-fit grid grid-cols-topics gap-4">
+          <ul className="md:w-1/2 h-fit grid grid-cols-topics gap-4">
             {topics.map((topic, i) => {
               return (
                 <motion.li

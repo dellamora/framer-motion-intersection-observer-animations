@@ -1,9 +1,8 @@
 import React from "react";
-
 interface footerProps {
   children?: React.ReactNode;
 }
-const Footer: React.FC<footerProps> = ({ children }): JSX.Element => {
+const Footer: React.FC<footerProps> = (): JSX.Element => {
   return (
     <footer className="text-grayMedium bg-primary p-4  md:flex md:items-center md:justify-between md:p-6">
     <span className="text-sm sm:text-center text-grayMedium">

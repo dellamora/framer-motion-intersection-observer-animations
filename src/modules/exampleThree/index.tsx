@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Section } from "../../common/components/section";
 import CompanyButton from "./button";
@@ -17,7 +16,7 @@ const ExampleThree = (): JSX.Element => {
 
   return (
     <Section 
-      className="min-h-[60vh]"
+      className="min-h-[70vh]"
       id="exampleThree"
       setIsInView={state => {
         setInView(curr => state || curr);
