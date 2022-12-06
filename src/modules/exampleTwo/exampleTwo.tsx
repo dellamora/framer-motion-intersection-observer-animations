@@ -18,8 +18,9 @@ const ExampleTwo: React.FC<ExampleTwoProps> = ({ children }): JSX.Element => {
       setIsInView={state => {
         setInView(state);
       }}
+      className="min-h-screen"
       >
-      <Title title="Now you can play with your scroll" triggerAnimation={inView}/>
+      <Title title="Yes, that was the cool animation" triggerAnimation={inView}/>
       <Animation 
       inView={inView}
       >
@@ -31,9 +32,9 @@ const ExampleTwo: React.FC<ExampleTwoProps> = ({ children }): JSX.Element => {
       />
      <motion.img
        initial={{y: 0, x: -200, rotate: "-12deg"}}
-       animate={{y:0, x:-10, rotate: 0, transition: {type: "spring", stiffness: 50}}}  
+       animate={{y:0, x:-50, rotate: "30deg", transition: {type: "spring", stiffness: 50}}}  
        src="/leftDownGirl.png"
-       className=" absolute bottom-0 left-0  h-[21rem] lg:h-[25rem]"
+       className=" absolute bottom-3 left-0  h-[21rem] lg:h-[25rem]"
       />
       
       <motion.img
@@ -44,9 +45,9 @@ const ExampleTwo: React.FC<ExampleTwoProps> = ({ children }): JSX.Element => {
     />
       <motion.img
         initial={{y: 0, x:200, rotate: "6deg" }}
-        animate={{y:0, x:10, rotate: 0, transition: {type: "spring", stiffness: 50}}}       
+        animate={{y:0, x:0, rotate: "-6deg", transition: {type: "spring", stiffness: 50}}}       
         src="/l.png"
-        className=" absolute bottom-0 -right-0  h-[22rem] lg:h-[24rem] "
+        className=" absolute bottom-0 -right-80 lg:-right-96  h-[25rem] lg:h-[30rem] "
     />
       </Animation>
 
