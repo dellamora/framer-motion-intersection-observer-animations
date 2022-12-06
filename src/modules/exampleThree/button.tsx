@@ -21,7 +21,7 @@ const CompanyButton = ({
       animate={inView ?  {opacity: 1,transition:{delay: 1}} : {opacity: 0}} 
     >
       <button
-        className={` flex relative font-Inter items-center text-xl text-left py-2 md:px-6 px-4 z-20 
+        className={` w-full flex relative font-Inter items-center text-xl  py-2 md:px-6 px-4 z-20 
         ${active ? "text-redLight" : "text-grayMedium"}  `}
         onClick={onClick}
       >

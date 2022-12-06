@@ -17,16 +17,17 @@ const ExampleThree = (): JSX.Element => {
 
   return (
     <Section 
-      className="min-h-[70vh] flex-col p-0 gap-20  flex justify-center items-center "
+      className="min-h-[60vh]"
       id="exampleThree"
       setIsInView={state => {
         setInView(curr => state || curr);
       }}
     >
      <Animation inView={inView}>
-      <div className="flex flex-col justify-center ">
-      {buttons.map(({name, id}) => {
-        return  (
+      <div className="flex gap-8 md:gap-16 flex-col md:flex-row justify-center ">
+        <div className="w-full md:w-1/2 flex md:flex-col justify-between">
+        {buttons.map(({name, id}) => {
+         return  (
           <CompanyButton
           key={`btn-${id}`}
           active={activeBtn === id}
@@ -35,10 +36,13 @@ const ExampleThree = (): JSX.Element => {
           >
             {name}
           </CompanyButton>
-        )
-      })}
-       <h1 className="mt-20 w-full flex justify-center text-sm text-grayMedium"></h1>
+         )
+        })}
+      </div>
        </div>
+       <h1 className="mt-20 w-full flex justify-center text-center text-sm text-grayMedium">
+        Now you can create your own animations!<br/>or just stress yourself {`(:`}
+       </h1>
     </Animation>
     </Section>
   );
