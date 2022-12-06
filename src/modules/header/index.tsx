@@ -22,7 +22,6 @@ const Header: React.FC<HeaderProps> = ({ children }): JSX.Element => {
                 </a>
              ))}
          </div>
-        <Link  href="https://twitter.com/francidellamora" className="text-grayMedium font-thin"> threshold: 33%</Link>
         </nav>
     </div>
   );
