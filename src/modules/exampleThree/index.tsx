@@ -21,12 +21,10 @@ const ExampleThree = (): JSX.Element => {
       id="exampleThree"
       setIsInView={state => {
         setInView(curr => state || curr);
-        console.log("change:", state)
       }}
     >
-
-
-      <div className="flex flex-col justify-center w-1/2">
+     <Animation inView={inView}>
+      <div className="flex flex-col justify-center ">
       {buttons.map(({name, id}) => {
         return  (
           <CompanyButton
@@ -41,6 +39,7 @@ const ExampleThree = (): JSX.Element => {
       })}
        <h1 className="mt-20 w-full flex justify-center text-sm text-grayMedium">Now you can explore new possibilties</h1>
        </div>
+    </Animation>
     </Section>
   );
 };

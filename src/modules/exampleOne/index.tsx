@@ -3,7 +3,6 @@ import Section from "../../common/components/section";
 import Animation from "../../common/components/animation";
 import { motion } from "framer-motion";
 import Title from "../../common/components/titleAnimation";
-import { InView } from "react-intersection-observer";
 
 const paragraphs = [
   {id:1, paragraph:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec fringilla tellus. Suspendisse viverra, augue vel commodo finibus, magna velit fermentum tortor, vitae molestie felis dui id ex. Aenean eleifend consectetur sodales. Cras ac consectetur tortor. Proin magna libero, viverra a aliquam sit amet, luctus eu ligula. Mauris euismod ut sem id eleifend. Donec laoreet interdum elit non interdum. Mauris auctor, justo id pharetra dignissim, risus tellus pretium libero, ac blandit nunc neque nec est. Suspendisse varius vestibulum ante, ut malesuada nunc iaculis eu. Sed dui velit, posuere vel ex ut, pretium luctus orci. Ut eget purus at tortor euismod gravida. Nullam quis nisl eget nisl finibus molestie. Cras gravida at arcu nec luctus."},
