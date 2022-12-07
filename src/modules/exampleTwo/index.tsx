@@ -7,7 +7,7 @@ import Title from "../../common/components/titleAnimation";
 interface ExampleTwoProps {
   children?: React.ReactNode;
 }
-const ExampleTwo: React.FC<ExampleTwoProps> = ({ children }): JSX.Element => {
+const ExampleTwo: React.FC<ExampleTwoProps> = (): JSX.Element => {
   const [inView, setInView] = useState(false);
   const animations = {
     hidden: {
