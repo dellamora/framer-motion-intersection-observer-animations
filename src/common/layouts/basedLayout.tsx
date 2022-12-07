@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Footer from "../../modules/footer";
 import Header from "../../modules/header";
 const BaseLayout = ({
