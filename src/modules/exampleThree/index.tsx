@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Section } from "../../common/components/section";
 import CompanyButton from "./button";
-import Animation from "../../common/components/animation";
-import { motion, MotionConfig } from "framer-motion";
+import { motion} from "framer-motion";
 
 
 const buttons = [
