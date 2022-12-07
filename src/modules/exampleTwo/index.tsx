@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Section from "../../common/components/section";
-import Animation from "../../common/components/animation";
 import { motion } from "framer-motion";
 import Title from "../../common/components/titleAnimation";
 
@@ -10,6 +9,14 @@ interface ExampleTwoProps {
 }
 const ExampleTwo: React.FC<ExampleTwoProps> = ({ children }): JSX.Element => {
   const [inView, setInView] = useState(false);
+  const animations = {
+    hidden: {
+      opacity: 0
+    },
+    view: {
+      opacity: 1,
+    }
+   }
   const firstGirl = {
     hidden: {
       opacity: 0,
@@ -88,10 +95,16 @@ const ExampleTwo: React.FC<ExampleTwoProps> = ({ children }): JSX.Element => {
       setIsInView={state => {
         setInView(state);
       }}
-      className="min-h-screen flex justify-center items-center "
+      className="min-h-screen flex justify-center items-center"
       >
       <Title title="Yes, that was the cool animation" triggerAnimation={inView}/>
-      <Animation inView={inView}>
+      <motion.div
+        className="flex flex-col"
+        initial="hidden"
+        animate={inView ? "view" : "hidden"}
+        variants={animations}  
+        transition={{staggerChildren: 0.5}}
+      >
         <motion.img
           variants={firstGirl}
           src="/firstGirl.png"
@@ -112,7 +125,7 @@ const ExampleTwo: React.FC<ExampleTwoProps> = ({ children }): JSX.Element => {
         src="/forthGirl.png"
         className=" absolute bottom-0  -right-[185px] md:-right-80 lg:-right-96 h-[18rem] md:h-[25rem] lg:h-[30rem] "
     />
-      </Animation>
+      </motion.div>
     </Section>
   );
 };
