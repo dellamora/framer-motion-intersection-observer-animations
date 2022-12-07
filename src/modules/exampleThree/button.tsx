@@ -6,20 +6,15 @@ import React from "react";
 type Props = {
   onClick: () => void;
   active: boolean;
-  inView: boolean;
   children: string;
 };
 const CompanyButton = ({
   onClick,
   active,
-  inView,
   children,
 }: Props): JSX.Element => {
   return (
-    <motion.div 
-      className="relative w-full"
-      animate={inView ?  {opacity: 1,transition:{delay: 1}} : {opacity: 0}} 
-    >
+    <div className="relative w-full">
       <button
         className={` w-full flex relative font-Inter items-center text-xl  py-2 md:px-6 px-4 z-20 
         ${active ? "text-redLight" : "text-grayMedium"}  `}
@@ -33,7 +28,7 @@ const CompanyButton = ({
           layoutId="buttonBg"
         />
       )}
-    </motion.div>
+    </div>
   );          
 };
 
