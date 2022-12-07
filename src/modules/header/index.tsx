@@ -9,7 +9,7 @@ const links = [
 interface HeaderProps {
   children?: React.ReactNode;
 }
-const Header: React.FC<HeaderProps> = ({ children }): JSX.Element => {
+const Header: React.FC<HeaderProps> = (): JSX.Element => {
     
   return (
     <div className="fixed overflow-hidden z-10">
