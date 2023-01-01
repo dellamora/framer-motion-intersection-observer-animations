@@ -28,8 +28,8 @@ const ExampleOne: React.FC<ExampleOneProps> = (): JSX.Element => {
   return (
     <Section
       id="exampleOne"
-      setIsInView={state => {
-        setInView(state );
+      setIsInView={inView => {
+        setInView(inView);
       }}
     >
       <div className="flex flex-col items-center gap-4 p-8 md:p-16">
@@ -57,8 +57,7 @@ const ExampleOne: React.FC<ExampleOneProps> = (): JSX.Element => {
                   key={`topic-${i}`}
                   initial={{opacity: 0}}
                   animate={{ opacity: 1}}
-                  transition={{
-                    x: { stiffness: 1000 },                                                     
+                  transition={{                                                   
                     delay:                              
                     1.2 + 0.2 + i * 0.3,
                   }} 
