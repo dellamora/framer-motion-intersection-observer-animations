@@ -19,13 +19,11 @@ const ExampleTwo: React.FC<ExampleTwoProps> = (): JSX.Element => {
    }
   const firstGirl = {
     hidden: {
-      opacity: 0,
       y: 0, 
       x: -200, 
       rotate: "12deg"
     },
     view: {
-      opacity: 1,
       y:0, 
       x:-55, 
       rotate: "30deg", 
@@ -37,13 +35,11 @@ const ExampleTwo: React.FC<ExampleTwoProps> = (): JSX.Element => {
   }
   const secondGirl = {
     hidden: {
-      opacity: 0,
       y: 0, 
       x: 200, 
       rotate: "12deg"
     },
     view: {
-      opacity: 1,
       y:0, 
       x:15, 
       rotate: 0,
@@ -55,13 +51,11 @@ const ExampleTwo: React.FC<ExampleTwoProps> = (): JSX.Element => {
   }
   const thirdGirl = {
     hidden: {
-      opacity: 0,
       y: 0, 
       x: -200, 
       rotate: "-24deg"
     },
     view: {
-      opacity: 1,
       y:0, 
       x:-10, 
       rotate: 0, 
@@ -73,13 +67,11 @@ const ExampleTwo: React.FC<ExampleTwoProps> = (): JSX.Element => {
   }
   const forthGirl = {
     hidden: {
-      opacity: 0,
       y: 0, 
       x: 200, 
       rotate: "6deg"
     },
     view: {
-      opacity: 1,
       y:0, 
       x:15, 
       rotate: "-6deg",
