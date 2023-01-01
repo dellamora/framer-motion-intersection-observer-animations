@@ -1,5 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+
 type Props = {
   id: string;
   children: React.ReactNode;
@@ -16,11 +17,12 @@ export const Section = ({
   const { ref, inView } = useInView({
     threshold: 0.4,
   });
+  
   useEffect(() => {
     if (setIsInView) {
       setIsInView(inView);
     }
-  }, [inView]);
+  }, [inView, setIsInView]);
 
   return (
     <section
