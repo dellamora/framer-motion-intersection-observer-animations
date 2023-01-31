@@ -52,7 +52,7 @@ const ExampleTwo: React.FC<ExampleTwoProps> = (): JSX.Element => {
   const thirdGirl = {
     hidden: {
       y: 0, 
-      x: -200, 
+      x: -350, 
       rotate: "-24deg"
     },
     view: {
@@ -68,7 +68,7 @@ const ExampleTwo: React.FC<ExampleTwoProps> = (): JSX.Element => {
   const forthGirl = {
     hidden: {
       y: 0, 
-      x: 200, 
+      x: 250, 
       rotate: "6deg"
     },
     view: {
