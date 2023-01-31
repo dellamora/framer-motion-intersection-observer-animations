@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Section } from "../../common/components/section";
-import CompanyButton from "./button";
+import ButtonExample from "./button";
 import { motion} from "framer-motion";
 
 
@@ -38,13 +38,13 @@ const ExampleThree = (): JSX.Element => {
         <div className="w-full md:w-1/2 flex md:flex-col justify-between">
         {buttons.map(({name, id}) => {
          return  (
-          <CompanyButton
+          <ButtonExample
             key={`btn-${id}`}
             active={activeBtn === id}
             onClick={() => { setActiveBtn(id)}}
           >
             {name}
-          </CompanyButton>
+          </ButtonExample>
          )
         })}
        </div>

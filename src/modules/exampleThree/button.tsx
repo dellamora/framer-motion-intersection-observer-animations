@@ -8,7 +8,7 @@ type Props = {
   active: boolean;
   children: string;
 };
-const CompanyButton = ({
+const ButtonExample = ({
   onClick,
   active,
   children,
@@ -32,4 +32,4 @@ const CompanyButton = ({
   );          
 };
 
-export default CompanyButton;
+export default ButtonExample;
